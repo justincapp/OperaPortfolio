@@ -34,7 +34,7 @@ export default function Home() {
     >
       <div className="absolute bg-black/60 top-0 left-0 w-full h-screen"></div>
 
-      <div id="container" className="w-full md:h-[90%] max-w-[1700px] relative md:p-3 ">
+      <div id="container" className="w-full md:h-[90%] max-h-[1000px] max-w-[1700px] relative md:p-3 ">
         <div className="flex items-top justify-start gap-1 h-[100%] bg-white bg-opacity-10 backdrop-blur-xl drop-shadow-2xl rounded-lg p-2">
           <div className="hidden md:flex bg-[#252836] rounded-lg  min-w-[40px] w-1/12 max-w-[50px] h-[100vh] md:h-[100%]  flex-1  top-0 left-0 z-[9999] flex-col items-center justify-between pt-3 pb-7 gap-7">
             <div className="flex flex-col gap-7">
@@ -335,7 +335,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bottom-0 text-gray-200 absolute w-full flex items-center justify-center py-4">
+      <div className="bottom-0 text-gray-200 absolute w-full flex items-center justify-center py-6">
   <p>Open source</p> - <span>Code by</span>
   <a href="https://justincappelle.ch" target="_blank" className="text-gray-200 underline ml-1">Justin</a>
 </div>
