@@ -30,12 +30,7 @@ export default function Home() {
   const [hiddenIconsState, setHiddenIconsState] = useState(false);
 
   const showMoreIcons = () => {
-    if (hiddenIconsState) {
-      setHiddenIconsState(false);
-      return;
-    }
-
-    setHiddenIconsState(true);
+    setHiddenIconsState(!hiddenIconsState);
   };
 
   return (
