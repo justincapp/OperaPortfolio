@@ -14,8 +14,6 @@ import {
   Battery50Icon,
   CameraIcon,
   HeartIcon,
-  PaperAirplaneIcon,
-  ShieldCheckIcon,
   HomeIcon,
   StarIcon,
   ClockIcon,
@@ -23,8 +21,23 @@ import {
 } from "@heroicons/react/24/outline";
 
 import Image from "next/image";
+import LinkCard from "./components/LinkCard";
+import { Box, Link, X } from "react-feather";
+import { useState } from "react";
+import clsx from "clsx";
 
 export default function Home() {
+  const [hiddenIconsState, setHiddenIconsState] = useState(false);
+
+  const showMoreIcons = () => {
+    if (hiddenIconsState) {
+      setHiddenIconsState(false);
+      return;
+    }
+
+    setHiddenIconsState(true);
+  };
+
   return (
     <main
       className="flex min-h-screen w-full justify-center items-center md:h-screen bg-cover bg-center relative"
@@ -34,7 +47,10 @@ export default function Home() {
     >
       <div className="absolute bg-black/60 top-0 left-0 w-full h-screen"></div>
 
-      <div id="container" className="w-full md:h-[90%] max-h-[1000px] max-w-[1700px] relative md:p-3 ">
+      <div
+        id="container"
+        className="w-full md:h-[90%] max-h-[1000px] max-w-[1700px] relative md:p-3 "
+      >
         <div className="flex items-top justify-start gap-1 h-[100%] bg-white bg-opacity-10 backdrop-blur-xl drop-shadow-2xl rounded-lg p-2">
           <div className="hidden md:flex bg-[#252836] rounded-lg  min-w-[40px] w-1/12 max-w-[50px] h-[100vh] md:h-[100%]  flex-1  top-0 left-0 z-[9999] flex-col items-center justify-between pt-3 pb-7 gap-7">
             <div className="flex flex-col gap-7">
@@ -102,14 +118,22 @@ export default function Home() {
             <div className="flex w-full items-center gap-2 justify-between">
               <div className="flex gap-2 w-full items-center justify-start">
                 <div className="gap-0 flex items-center w-full">
-                  <div className="xl:w-[10%] bg-[#3d4051] px-3 xl:px-1 py-2 rounded flex items-center gap-2 ">
-                    <HomeIcon className="w-4 h-4 text-gray-100" />
+                  <div className="cursor-pointer group xl:w-[10%] shadow-[-00px_6px_10px_0px_#e2e8f030] bg-[#3d4051] px-3 xl:px-1 py-2 rounded flex items-center gap-2 ">
+                    <HomeIcon className="group-hover:hidden w-4 h-4 text-gray-100" />
+                    <div className="w-4 group-hover:flex hidden  items-center justify-center">
+                      <X className=" w-3 h-3 text-gray-100" />
+                    </div>
                     <p className="text-xs">Fast access</p>
-                  </div>{" "}
-                  <div className="cursor-pointer select-none hover:bg-gray-100/10 transition xl:w-[10%] bg-[#3d4051]/0 px-3 xl:px-1 py-2 rounded flex items-center gap-2 ">
-                    <HomeIcon className="w-4 h-4 text-gray-100" />
+                  </div>
+
+                  <div className="cursor-pointer group select-none hover:bg-gray-100/10 transition xl:w-[10%] bg-[#3d4051]/0 px-3 xl:px-1 py-2 rounded flex items-center gap-2 ">
+                    <Link className="group-hover:hidden w-4 h-4 text-gray-100" />
+                    <div className="w-4 group-hover:flex hidden  items-center justify-center">
+                      <X className=" w-3 h-3 text-gray-100" />
+                    </div>
                     <p className="text-xs">About me</p>
                   </div>
+
                   <div className="w-2"></div>
                   <div className="h-5 w-5 rounded-full flex items-center justify-center bg-gray-800 ">
                     <PlusIcon className="h-3 w-3 "></PlusIcon>
@@ -119,47 +143,75 @@ export default function Home() {
               <MagnifyingGlassIcon className="h-4 w-4 text-white" />
             </div>
 
-            <div className="rounded-lg bg-[#252836] md:px-3 py-4 h-[40px] w-full flex justify-between relative items-center">
-              <div className="hidden md:flex items-center gap-1 md:gap-3 w-2/12 md:w-1/12">
-                <div className="w-5/12 flex items-center justify-between">
-                  <ChevronLeftIcon className="h-4 w-4 text-gray-500" />
-                  <ChevronRightIcon className="h-4 w-4 text-gray-500" />
+            <div className="flex items-center justify-between gap-1">
+              <div className="rounded-lg bg-[#252836] md:px-3 py-4 h-[40px] w-full flex justify-between relative items-center">
+                <div className="hidden md:flex items-center gap-1 md:gap-3 w-2/12 md:w-1/12">
+                  <div className="w-5/12 flex items-center justify-between">
+                    <ChevronLeftIcon className="h-4 w-4 text-gray-500" />
+                    <ChevronRightIcon className="h-4 w-4 text-gray-500" />
+                  </div>
+                  <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
+                    <ArrowPathIcon className="h-4 w-4 text-gray-300 cursor-pointer group-hover:text-cyan-400" />
+                  </div>
                 </div>
-                <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
-                  <ArrowPathIcon className="h-4 w-4 text-gray-300 cursor-pointer group-hover:text-cyan-400" />
+
+                <div className="p-1 gap-0 md:gap-2 w-full flex items-center justify-between ">
+                  <div className="py-1 px-2 inline-flex w-6/12 md:w-full md:flex items-center gap-2 hover:bg-[#353a4e] rounded-lg transition">
+                    <div className="flex items-center gap-1 justify-start">
+                      <div class="rounded  bg-indigo-600 px-0.5 inline-flex">
+                        <p className="uppercase text-[8px] p-0.5">vpn</p>
+                      </div>
+                      <LockClosedIcon className="h-4 w-4 text-gray-200"></LockClosedIcon>
+                    </div>
+
+                    <input
+                      type="text"
+                      className="bg-transparent text-sm truncate"
+                      value="justincappelle.ch"
+                    />
+                  </div>
+
+                  <div className="flex items-center gap-1 md:gap-2 w-8/12 md:w-2/12 justify-center md:justify-end">
+                    <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
+                      <CameraIcon className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
+                    </div>
+                    <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
+                      <HeartIcon className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
+                    </div>
+                    <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
+                      <Battery50Icon className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
+                    </div>
+                    <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
+                      <AdjustmentsHorizontalIcon className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="p-1 gap-0 md:gap-2 w-full flex items-center justify-between ">
-                <div className="py-1 px-2 inline-flex w-6/12 md:w-full md:flex items-center gap-2 hover:bg-[#353a4e] rounded-lg transition">
-                  <div className="flex items-center gap-1 justify-start">
-                    <div class="rounded  bg-indigo-600 px-0.5 inline-flex">
-                      <p className="uppercase text-[8px] p-0.5">vpn</p>
+              <div className="rounded flex items-center cursor-pointer justify-end bg-[#252836] md:px-1 h-[40px] transition">
+                <div
+                  className={clsx(
+                    hiddenIconsState
+                      ? "w-20 transition-all justify-end duration-300"
+                      : "w-2 transition-all duration-300",
+                    "flex items-center gap-2 h-[100%] relative"
+                  )}
+                >
+                  {hiddenIconsState && (
+                    <div className="flex items-center gap-2 transition-opacity duration-300">
+                      <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
+                        <Box className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
+                      </div>
+                      <div className="hover:bg-[#484d65] mr-4 h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
+                        <Box className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
+                      </div>
                     </div>
-                    <LockClosedIcon className="h-4 w-4 text-gray-200"></LockClosedIcon>
-                  </div>
+                  )}
 
-                  <input
-                    type="text"
-                    className="bg-transparent text-sm truncate"
-                    value="justincappelle.ch"
-                  />
-                </div>
-
-                <div className="flex items-center gap-1 md:gap-2 w-8/12 md:w-2/12 justify-center md:justify-end">
-                  <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
-                    <CameraIcon className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
-                  </div>
-                
-                  <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
-                    <HeartIcon className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
-                  </div>
-                  <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
-                    <Battery50Icon className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
-                  </div>
-                  <div className="hover:bg-[#484d65] h-6 w-6 flex items-center justify-center group rounded hover:text-cyan-400">
-                    <AdjustmentsHorizontalIcon className="h-4 w-4 text-gray-200/70 group-hover:text-cyan-400" />
-                  </div>
+                  <div
+                    className="h-[60%] absolute right-0  py-1 w-2 rounded-full bg-violet-600"
+                    onClick={showMoreIcons}
+                  ></div>
                 </div>
               </div>
             </div>
@@ -207,72 +259,41 @@ export default function Home() {
               <div className="w-full flex items-center gap-2 justify-center mt-20 z-[9999]">
                 <div className="w-11/12 md:w-8/12 space-y-4">
                   <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:grid-cols-6">
-                    <div className="w-full space-y-2">
-                      <div
-                        className="bg-yellow-400 rounded-2xl w-full h-24 bg-cover bg-center"
-                        style={{ backgroundImage: `url("me_ai_backgroundd.jpg")` }}
-                      ></div>
-                      <p className="text-sm text-white text-center">
-                        About me
-                      </p>
-                    </div>
+                    <LinkCard backgroundImage="me_ai_backgroundd.jpg">
+                      About me
+                    </LinkCard>
 
-                    <div className="w-full space-y-2">
-                      <div
-                        className="bg-yellow-400 rounded-2xl w-full h-24 bg-cover bg-center"
-                        style={{ backgroundImage: `url("me 2.jpg")` }}
-                      ></div>
-                      <p className="text-sm text-white text-center">
-                    My skills
-                      </p>
-                    </div>
+                    <LinkCard backgroundImage="me 2.jpg">About me</LinkCard>
 
-                    <div className="w-full space-y-2">
-                      <div className="bg-yellow-400 rounded-2xl w-full h-24"></div>
-                      <p className="text-sm text-white text-center">
-                        My services
-                      </p>
-                    </div>
+                    <LinkCard>My services</LinkCard>
 
-                    <div className="w-full space-y-2">
-                      <div className="bg-neutral-400 rounded-2xl w-full h-24 flex items-center justify-center">
-                        <Image
-                          height="200"
-                          width="200"
-                          src="/icons/cal.png"
-                          alt="Justin Cappelle - Compte Linkedin"
-                          className="w-10"
-                        />
-                      </div>
-                      <p className="text-sm text-white text-center">
-                       Call me
-                      </p>
-                    </div>
-                    <div className="w-full space-y-2">
-                      <div className="bg-pink-200 rounded-2xl w-full h-24 flex items-center justify-center">
-                        <Image
-                          height="200"
-                          width="200"
-                          src="/icons/dribbble.png"
-                          alt="Justin Cappelle - Compte Linkedin"
-                          className="w-10"
-                        />
-                      </div>
-                      <p className="text-sm text-white text-center">Dribbble</p>
-                    </div>
-
-                    <div className="w-full space-y-2">
-                      <div className="bg-blue-200 rounded-2xl w-full h-24 flex items-center justify-center">
-                        <Image
-                          height="200"
-                          width="200"
-                          src="/icons/linkedin.png"
-                          alt="Justin Cappelle - Compte Linkedin"
-                          className="w-10"
-                        />
-                      </div>
-                      <p className="text-sm text-white text-center">Linkedin</p>
-                    </div>
+                    <LinkCard
+                      type="icon"
+                      image="/icons/cal.png"
+                      background="bg-neutral-700/70"
+                      alt="Call me"
+                      href="www.linkedin.com"
+                    >
+                      Call me
+                    </LinkCard>
+                    <LinkCard
+                      type="icon"
+                      image="/icons/dribbble.png"
+                      background="bg-pink-200/70"
+                      alt="Dribbble"
+                      href="www.linkedin.com"
+                    >
+                      Dribbble
+                    </LinkCard>
+                    <LinkCard
+                      type="icon"
+                      image="/icons/linkedin.png"
+                      background="bg-blue-200/70"
+                      alt="Linkedin"
+                      href="www.linkedin.com"
+                    >
+                      Linkedin
+                    </LinkCard>
                   </div>
                 </div>
               </div>{" "}
@@ -281,51 +302,47 @@ export default function Home() {
                   <h2>My latests projects</h2>
                   <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:grid-cols-6">
                     <div className="w-full space-y-2">
-                    <div className="bg-blue-200 rounded-2xl w-full h-24 flex items-center justify-center">
-                       <div className="h-10 w-10 font-extrabold text-xl bg-blue-900 flex items-center justify-center rounded-lg">
-                        M
-                       </div>
-                      </div>  
-                      <p className="text-sm text-white text-start">
-                     Motivuza
-                      </p>
-                    </div>
-                    <div className="w-full space-y-2">
-                    <div className="bg-sky-200 rounded-2xl w-full h-24 flex items-center justify-center">
-                       <div className="h-10 w-10 font-extrabold text-xl bg-sky-900 flex items-center justify-center rounded-lg">
-                        S
-                       </div>
-                      </div>                      <p className="text-sm text-white text-start">
-                       Smartuza
-                      </p>
-                    </div>
-                    <div className="w-full space-y-2">
-                    <div className="bg-red-200 rounded-2xl w-full h-24 flex items-center justify-center">
-                       <div className="h-10 w-10 font-extrabold text-xl bg-red-900 flex items-center justify-center rounded-lg">
-                        S
-                       </div>
+                      <div className="bg-blue-200 rounded-2xl w-full h-24 flex items-center justify-center">
+                        <div className="h-10 w-10 font-extrabold text-xl bg-blue-900 flex items-center justify-center rounded-lg">
+                          M
+                        </div>
                       </div>
-                      <p className="text-sm text-white text-start">
-                        Sofratis
-                      </p>
+                      <p className="text-sm text-white text-start">Motivuza</p>
+                    </div>
+                    <div className="w-full space-y-2">
+                      <div className="bg-sky-200 rounded-2xl w-full h-24 flex items-center justify-center">
+                        <div className="h-10 w-10 font-extrabold text-xl bg-sky-900 flex items-center justify-center rounded-lg">
+                          S
+                        </div>
+                      </div>{" "}
+                      <p className="text-sm text-white text-start">Smartuza</p>
+                    </div>
+                    <div className="w-full space-y-2">
+                      <div className="bg-red-200 rounded-2xl w-full h-24 flex items-center justify-center">
+                        <div className="h-10 w-10 font-extrabold text-xl bg-red-900 flex items-center justify-center rounded-lg">
+                          S
+                        </div>
+                      </div>
+                      <p className="text-sm text-white text-start">Sofratis</p>
                     </div>
                     <div className="w-full space-y-2">
                       <div className="bg-pink-200 rounded-2xl w-full h-24 flex items-center justify-center">
-                       <div className="h-10 w-10 font-extrabold text-xl bg-pink-900 flex items-center justify-center rounded-lg">
-                        M
-                       </div>
+                        <div className="h-10 w-10 font-extrabold text-xl bg-pink-900 flex items-center justify-center rounded-lg">
+                          M
+                        </div>
                       </div>
                       <p className="text-sm text-white text-start">Menuza</p>
                     </div>
                     <div className="w-full space-y-2">
-                    <div className="bg-zinc-200 rounded-2xl w-full h-24 flex items-center justify-center">
-                       <div className="h-10 w-10 font-extrabold text-xl bg-zinc-900 flex items-center justify-center rounded-lg">
-                        K
-                       </div>
+                      <div className="bg-zinc-200 rounded-2xl w-full h-24 flex items-center justify-center">
+                        <div className="h-10 w-10 font-extrabold text-xl bg-zinc-900 flex items-center justify-center rounded-lg">
+                          K
+                        </div>
                       </div>
-                      <p className="text-sm text-white text-start">A SaaS template</p>
+                      <p className="text-sm text-white text-start">
+                        A SaaS template
+                      </p>
                     </div>{" "}
-                   
                   </div>
                 </div>
               </div>
@@ -334,12 +351,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <div className="bottom-0 text-gray-200 absolute w-full flex items-center justify-center py-6">
-  <p>Open source</p> - <span>Code by</span>
-  <a href="https://justincappelle.ch" target="_blank" className="text-gray-200 underline ml-1">Justin</a>
-</div>
-
     </main>
   );
 }
