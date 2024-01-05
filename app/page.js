@@ -224,13 +224,13 @@ export default function Home() {
             >
               <div className="flex w-full flex-col text-sm space-y-1 z-[9999] p-3 md:p-0">
                 <div>
-                  <p className="text-white">SMontreux</p>
+                  <p className="text-white">Montreux</p>
                 </div>
 
                 <div className="flex items-center gap-2">
                   <SunIcon className="h-6 w-6 text-white"></SunIcon>
 
-                  <p className="text-white">S19°C</p>
+                  <p className="text-white">19°C</p>
                 </div>
               </div>
               <div className="flex w-full justify-center z-[9999]">
@@ -304,7 +304,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-blue-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl bg-blue-900 flex items-center justify-center rounded-lg">
-                        <p className="text-white">SM</p>
+                        <p className="text-white">M</p>
                           
                         </div>
                       </div>
@@ -313,7 +313,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-sky-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl bg-sky-900 flex items-center justify-center rounded-lg">
-                          <p className="text-white">SS</p>
+                          <p className="text-white">S</p>
                         </div>
                       </div>{" "}
                       <p className="text-sm text-white text-start">Project Name</p>
@@ -321,7 +321,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-red-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl  bg-red-900 flex items-center justify-center rounded-lg">
-                          <p className="text-white">SS</p>
+                          <p className="text-white">S</p>
                         </div>
                       </div>
                       <p className="text-sm text-white text-start">Project Name</p>
@@ -329,7 +329,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-pink-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl bg-pink-900 flex items-center justify-center rounded-lg">
-                        <p className="text-white">SM</p>
+                        <p className="text-white">M</p>
                         </div>
                       </div>
                       <p className="text-sm text-white text-start">Project Name</p>
@@ -337,7 +337,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-zinc-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl bg-zinc-900 flex items-center justify-center rounded-lg">
-                          <p className="text-white">SK</p>
+                          <p className="text-white">K</p>
                         </div>
                       </div>
                       <p className="text-sm text-white text-start">
