@@ -166,7 +166,7 @@ export default function Home() {
 
                     <input
                       type="text"
-                      className="bg-transparent text-sm truncate"
+                      className="bg-transparent text-sm truncate text-white"
                       value="justincappelle.ch"
                     />
                   </div>
