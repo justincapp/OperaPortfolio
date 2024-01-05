@@ -123,7 +123,7 @@ export default function Home() {
                     <div className="w-4 group-hover:flex hidden  items-center justify-center">
                       <X className=" w-3 h-3 text-gray-100" />
                     </div>
-                    <p className="text-xs">Fast access</p>
+                    <p className="text-xs text-white">Fast access</p>
                   </div>
 
                   <div className="cursor-pointer group select-none hover:bg-gray-100/10 transition xl:w-[10%] bg-[#3d4051]/0 px-3 xl:px-1 py-2 rounded flex items-center gap-2 ">
@@ -131,7 +131,7 @@ export default function Home() {
                     <div className="w-4 group-hover:flex hidden  items-center justify-center">
                       <X className=" w-3 h-3 text-gray-100" />
                     </div>
-                    <p className="text-xs">About me</p>
+                    <p className="text-xs text-white">About me</p>
                   </div>
 
                   <div className="w-2"></div>
@@ -224,13 +224,13 @@ export default function Home() {
             >
               <div className="flex w-full flex-col text-sm space-y-1 z-[9999] p-3 md:p-0">
                 <div>
-                  <p>Montreux</p>
+                  <p className="text-white">SMontreux</p>
                 </div>
 
                 <div className="flex items-center gap-2">
                   <SunIcon className="h-6 w-6 text-white"></SunIcon>
 
-                  <p>19°C</p>
+                  <p className="text-white">S19°C</p>
                 </div>
               </div>
               <div className="flex w-full justify-center z-[9999]">
@@ -304,7 +304,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-blue-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl bg-blue-900 flex items-center justify-center rounded-lg">
-                        <p>M</p>
+                        <p className="text-white">SM</p>
                           
                         </div>
                       </div>
@@ -313,7 +313,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-sky-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl bg-sky-900 flex items-center justify-center rounded-lg">
-                          <p>S</p>
+                          <p className="text-white">SS</p>
                         </div>
                       </div>{" "}
                       <p className="text-sm text-white text-start">Project Name</p>
@@ -321,7 +321,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-red-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl  bg-red-900 flex items-center justify-center rounded-lg">
-                          <p>S</p>
+                          <p className="text-white">SS</p>
                         </div>
                       </div>
                       <p className="text-sm text-white text-start">Project Name</p>
@@ -329,7 +329,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-pink-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl bg-pink-900 flex items-center justify-center rounded-lg">
-                        <p>M</p>
+                        <p className="text-white">SM</p>
                         </div>
                       </div>
                       <p className="text-sm text-white text-start">Project Name</p>
@@ -337,7 +337,7 @@ export default function Home() {
                     <div className="w-full space-y-2">
                       <div className="bg-zinc-200 rounded-2xl w-full h-24 flex items-center justify-center">
                         <div className="h-10 w-10 font-extrabold text-xl bg-zinc-900 flex items-center justify-center rounded-lg">
-                          <p>K</p>
+                          <p className="text-white">SK</p>
                         </div>
                       </div>
                       <p className="text-sm text-white text-start">
