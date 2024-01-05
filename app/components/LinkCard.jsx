@@ -26,7 +26,7 @@ export default function LinkCard({
             width="200"
             src={image}
             alt={alt}
-            className="w-10"
+            className="w-10 rounded-lg"
           />
         </div>
       </a>

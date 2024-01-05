@@ -49,7 +49,7 @@ export default function Home() {
 
       <div
         id="container"
-        className="w-full md:h-[90%] max-h-[1000px] max-w-[1700px] relative md:p-3 "
+        className="w-full md:h-[95%] max-h-[1200px] max-w-[1700px] relative md:p-3 "
       >
         <div className="flex items-top justify-start gap-1 h-[100%] bg-white bg-opacity-10 backdrop-blur-xl drop-shadow-2xl rounded-lg p-2">
           <div className="hidden md:flex bg-[#252836] rounded-lg  min-w-[40px] w-1/12 max-w-[50px] h-[100vh] md:h-[100%]  flex-1  top-0 left-0 z-[9999] flex-col items-center justify-between pt-3 pb-7 gap-7">
@@ -136,7 +136,7 @@ export default function Home() {
 
                   <div className="w-2"></div>
                   <div className="h-5 w-5 rounded-full flex items-center justify-center bg-gray-800 ">
-                    <PlusIcon className="h-3 w-3 "></PlusIcon>
+                    <PlusIcon className="h-3 w-3 text-white"></PlusIcon>
                   </div>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Home() {
                   <div className="py-1 px-2 inline-flex w-6/12 md:w-full md:flex items-center gap-2 hover:bg-[#353a4e] rounded-lg transition">
                     <div className="flex items-center gap-1 justify-start">
                       <div class="rounded  bg-indigo-600 px-0.5 inline-flex">
-                        <p className="uppercase text-[8px] p-0.5">vpn</p>
+                        <p className="uppercase text-[8px] p-0.5 text-white">vpn</p>
                       </div>
                       <LockClosedIcon className="h-4 w-4 text-gray-200"></LockClosedIcon>
                     </div>
@@ -167,7 +167,7 @@ export default function Home() {
                     <input
                       type="text"
                       className="bg-transparent text-sm truncate text-white"
-                      value="justincappelle.ch"
+                      value="portfolio-opera.vercel.app"
                     />
                   </div>
 
@@ -257,20 +257,33 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full flex items-center gap-2 justify-center mt-20 z-[9999]">
-                <div className="w-11/12 md:w-8/12 space-y-4">
-                  <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:grid-cols-6">
-                    <LinkCard backgroundImage="me_ai_backgroundd.jpg">
-                      About me
+                <div className="w-11/12 md:w-8/12 space-y-4 mx-auto">
+                  <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:grid-cols-5">
+                   
+
+                    <LinkCard
+                      type="icon"
+                      image="/icons/github.png"
+                      background="bg-neutral-900/70"
+                      alt="Call me"
+                      href="www.linkedin.com"
+                    >
+                      GitHub
                     </LinkCard>
-
-                    <LinkCard backgroundImage="me 2.jpg">About me</LinkCard>
-
-                    <LinkCard>My services</LinkCard>
+                    <LinkCard
+                      type="icon"
+                      image="/icons/instagram.png"
+                      background="bg-red-400/10"
+                      alt="Call me"
+                      href="www.linkedin.com"
+                    >
+                      Instagram
+                    </LinkCard>
 
                     <LinkCard
                       type="icon"
                       image="/icons/cal.png"
-                      background="bg-neutral-700/70"
+                      background="bg-white/50"
                       alt="Call me"
                       href="www.linkedin.com"
                     >
@@ -347,7 +360,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="z-[0] bg-black/30 absolute top-0 left-0 w-full h-[100%] "></div>
+              <div className="z-[0] bg-black/50 absolute top-0 left-0 w-full h-[100%] "></div>
             </div>
           </div>
         </div>
