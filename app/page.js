@@ -258,7 +258,7 @@ export default function Home() {
               </div>
               <div className="w-full flex items-center gap-2 justify-center mt-20 z-[9999]">
                 <div className="w-11/12 md:w-8/12 space-y-4 mx-auto">
-                  <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:grid-cols-5">
+                  <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:grid-cols-6">
                    
 
                     <LinkCard
@@ -289,6 +289,18 @@ export default function Home() {
                     >
                       Call me
                     </LinkCard>
+
+                    <LinkCard
+                      type="icon"
+                      image="/icons/whatsapp.png"
+                      background="bg-green-400/20"
+                      alt="Call me"
+                      href="www.linkedin.com"
+                    >
+                      GitHub
+                    </LinkCard>
+
+
                     <LinkCard
                       type="icon"
                       image="/icons/dribbble.png"
