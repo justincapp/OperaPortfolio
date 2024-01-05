@@ -8,7 +8,8 @@ export default function LinkCard({
   type,
   image,
   alt,
-  href
+  href,
+  background
 }) {
   return (
     <div
@@ -19,7 +20,7 @@ export default function LinkCard({
     >
       {type === "icon" ? (
       <a href={href} target="_blank">
-          <div className="bg-neutral-400/70 rounded-2xl w-full h-24 flex items-center justify-center">
+          <div className={clsx("rounded-2xl w-full h-24 flex items-center justify-center", background)}>
           <Image
             height="200"
             width="200"

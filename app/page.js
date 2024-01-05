@@ -55,9 +55,9 @@ export default function Home() {
           <div className="hidden md:flex bg-[#252836] rounded-lg  min-w-[40px] w-1/12 max-w-[50px] h-[100vh] md:h-[100%]  flex-1  top-0 left-0 z-[9999] flex-col items-center justify-between pt-3 pb-7 gap-7">
             <div className="flex flex-col gap-7">
               <div className="flex items-center justify-center flex-col space-y-2">
-                <div className="bg-red-400 h-3 w-3 rounded-full"></div>
-                <div className="bg-gray-600 h-3 w-3 rounded-full"></div>
-                <div className="bg-green-400 h-3 w-3 rounded-full"></div>
+                <div className="bg-red-500 h-3 w-3 rounded-full"></div>
+                <div className="bg-yellow-500 h-3 w-3 rounded-full"></div>
+                <div className="bg-green-500 h-3 w-3 rounded-full"></div>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="p-1 rounded-xl bg-indigo-700 flex items-center justify-center h-8 w-8 group ">
@@ -307,7 +307,7 @@ export default function Home() {
                           M
                         </div>
                       </div>
-                      <p className="text-sm text-white text-start">Motivuza</p>
+                      <p className="text-sm text-white text-start">Project Name</p>
                     </div>
                     <div className="w-full space-y-2">
                       <div className="bg-sky-200 rounded-2xl w-full h-24 flex items-center justify-center">
@@ -315,7 +315,7 @@ export default function Home() {
                           S
                         </div>
                       </div>{" "}
-                      <p className="text-sm text-white text-start">Smartuza</p>
+                      <p className="text-sm text-white text-start">Project Name</p>
                     </div>
                     <div className="w-full space-y-2">
                       <div className="bg-red-200 rounded-2xl w-full h-24 flex items-center justify-center">
@@ -323,7 +323,7 @@ export default function Home() {
                           S
                         </div>
                       </div>
-                      <p className="text-sm text-white text-start">Sofratis</p>
+                      <p className="text-sm text-white text-start">Project Name</p>
                     </div>
                     <div className="w-full space-y-2">
                       <div className="bg-pink-200 rounded-2xl w-full h-24 flex items-center justify-center">
@@ -331,7 +331,7 @@ export default function Home() {
                           M
                         </div>
                       </div>
-                      <p className="text-sm text-white text-start">Menuza</p>
+                      <p className="text-sm text-white text-start">Project Name</p>
                     </div>
                     <div className="w-full space-y-2">
                       <div className="bg-zinc-200 rounded-2xl w-full h-24 flex items-center justify-center">
